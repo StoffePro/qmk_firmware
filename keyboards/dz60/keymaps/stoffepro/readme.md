@@ -1,0 +1,1 @@
+the dz60_layout_60_ansi_mine.json file was used to bootstrap te basic keymap, and is here for reference only. the actual keymap.c has diverged significantly.
