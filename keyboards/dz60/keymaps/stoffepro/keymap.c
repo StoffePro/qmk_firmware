@@ -18,11 +18,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /* Row 1 */
     KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P, KC_LBRC, KC_RBRC, KC_BSLS, 
     /* Row 2 */
-    TT(1), KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_QUOT, KC_ENT,  
+    LT(1, KC_CAPS), KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_QUOT, KC_ENT,  
     /* Row 3 */
     KC_LSPO, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_RSPC, 
     /* Row 4 */
-    KC_LCTL, KC_LGUI, KC_LALT, KC_SPC, TT(1), TT(2), KC_APP, KC_RCTL), 
+    KC_LCTL, KC_LGUI, KC_LALT, KC_SPC, KC_ALGR, TT(2), KC_APP, KC_RCTL), 
 	
   [LAYER_NAV] = LAYOUT_60_ansi(
     /* Row 0 */
@@ -34,7 +34,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /* Row 3 */
     _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_HOME, KC_END, XXXXXXX, KC_RALT, KC_RGUI, _______,  
     /* Row 4 */
-    _______, _______, _______, _______, TG(1), _______, _______, _______),
+    _______, _______, _______, _______, _______, _______, _______, _______),
 
   [LAYER_MOUSEMEDIA] = LAYOUT_60_ansi(
     /* Row 0 */
