@@ -1,24 +1,14 @@
-#include <stdint.h>
-#include <stdbool.h>
+#include "matrix.h"
 #include <string.h>
-#include <hal.h>
 #include "timer.h"
 #include "wait.h"
-#include "print.h"
-#include "matrix.h"
+#include "debug.h"
 #include "i2c_master.h"
-#include QMK_KEYBOARD_H
+#include "ergodox_stm32.h"
 
 #ifndef DEBOUNCE
 #define DEBOUNCE 10
 #endif
-
-//#define DEBUG_MATRIX_SCAN_RATE
-
-//#ifdef DEBUG_MATRIX_SCAN_RATE
-//uint32_t matrix_timer;
-//uint32_t matrix_scan_count;
-//#endif
 
 static uint8_t mcp23017_reset_loop = 0;
 
@@ -63,7 +53,7 @@ void matrix_init(void) {
       debounce_matrix[i * MATRIX_COLS + j] = 0;
     }
   }
-  matrix_init_quantum();
+  matrix_init_kb();
 }
 
 void matrix_power_up(void) {
@@ -122,12 +112,8 @@ uint8_t matrix_scan(void) {
 
     unselect_rows();
   }
-  matrix_scan_quantum();
+  matrix_scan_kb();
   return 0;
-}
-
-bool matrix_is_modified(void) {
-  return true;
 }
 
 inline

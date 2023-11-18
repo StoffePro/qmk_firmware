@@ -16,14 +16,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 #pragma once
 
-#include "config_common.h"
-
-#define VENDOR_ID 0xFEED
-#define PRODUCT_ID 0x1308
-#define DEVICE_VER 0x101
-#define MANUFACTURER ErgoDox
-#define PRODUCT ErgoDox STM
-#define DESCRIPTION ErgoDox STM32 Keyboard
 
 #define MATRIX_ROWS 14
 #define MATRIX_ROWS_PER_SIDE (MATRIX_ROWS / 2)
@@ -33,3 +25,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     keyboard_report->mods == (MOD_BIT(KC_LCTL) | MOD_BIT(KC_RCTL)) || \
     keyboard_report->mods == (MOD_BIT(KC_LSFT) | MOD_BIT(KC_RSFT)) \
 )
+
+// i2c_master driver config
+#define I2C1_CLOCK_SPEED 400000
+#define I2C1_DUTY_CYCLE FAST_DUTY_CYCLE_2
